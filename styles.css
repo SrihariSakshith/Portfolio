@@ -575,3 +575,14 @@ section {
     padding: 50px 20px;
     transition: background 0.3s ease-in-out;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.coding-profile img, .contact-button img {
+    max-width: 80px; /* Restrict maximum width for logos */
+    max-height: 80px; /* Restrict maximum height for logos */
+    object-fit: contain;
+}
