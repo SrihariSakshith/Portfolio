@@ -261,12 +261,12 @@ a:hover {
     transform: scale(1.05);
 }
 
-#portfolio {
+#projects {
     padding: 40px 20px; /* Reduced padding */
     margin-top: -20px; /* Adjusted margin to reduce space */
 }
 
-#portfolio .portfolio-gallery {
+#projects .portfolio-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -337,17 +337,40 @@ a:hover {
 }
 
 .contact-button {
-    background: #00aaff;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #2c2c2c;
+    color: #e0e0e0;
+    padding: 15px 20px;
+    border-radius: 10px;
     text-decoration: none;
     font-size: 1rem;
-    transition: background 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-button img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .contact-button:hover {
-    background: #007bff;
+    transform: scale(1.1);
+    background: #00aaff;
+}
+
+.contact-button:hover img {
+    transform: scale(1.2);
+}
+
+.contact-button p {
+    margin: 0;
+    font-size: 1rem;
+    color: #e0e0e0;
+    font-weight: bold;
 }
 
 #education {
@@ -488,4 +511,67 @@ a:hover {
     font-size: 1rem;
     color: #e0e0e0;
     margin: 0;
+}
+
+#coding-profiles {
+    padding: 50px 20px;
+    background: #1f1f1f;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+#coding-profiles h2 {
+    font-size: 2.2rem;
+    color: #00aaff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.coding-profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.coding-profile {
+    text-decoration: none;
+    color: #e0e0e0;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.coding-profile img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.coding-profile:hover img {
+    transform: scale(1.1);
+}
+
+.coding-profile p {
+    font-size: 1rem;
+    margin: 0;
+    color: #00aaff;
+    font-weight: bold;
+}
+
+section:nth-child(odd) {
+    background: #1f1f1f; /* Darker background for odd sections */
+}
+
+section:nth-child(even) {
+    background: #2c2c2c; /* Slightly lighter background for even sections */
+}
+
+section {
+    padding: 50px 20px;
+    transition: background 0.3s ease-in-out;
 }
