@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Srihari Sakshith Kotichintala | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'primary': '#0a0a0a',
+              'secondary': '#1a1a1a',
+              'accent': '#3b82f6',
+              'text-primary': '#f0f0f0',
+              'text-secondary': '#a0a0a0',
+            },
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* General body styles */
+        body {
+            background-color: #0a0a0a;
+            color: #f0f0f0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Fade-in-up animation */
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Active navigation link style */
+        .active-nav-link {
+            color: #3b82f6 !important;
+            font-weight: 600 !important;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-primary text-text-primary">
+    
+    <div class="bg-primary min-h-screen font-sans">
+        <header class="bg-secondary/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-md">
+            <nav class="container mx-auto px-4 md:px-8 flex justify-between items-center py-4">
+                <a href="#hero" class="text-xl font-bold text-accent">Srihari Sakshith</a>
+                <div id="desktop-nav" class="hidden md:flex space-x-6 items-center">
+                     <!-- Desktop nav links will be injected here -->
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle-btn" class="text-text-primary focus:outline-none" aria-label="Toggle menu">
+                        <svg class="w-7 h-7" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    </button>
+                </div>
+            </nav>
+             <div id="mobile-menu" class="hidden md:hidden bg-secondary">
+                <div class="container mx-auto px-8 pt-2 pb-4 flex flex-col space-y-3">
+                    <!-- Mobile nav links will be injected here -->
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="hero" class="min-h-screen flex items-center justify-center bg-primary pt-16">
+                <div class="container mx-auto px-4 md:px-8 animate-fade-in-up" style="animation-delay: 0.2s;">
+                   <div class="flex flex-col md:flex-row items-center justify-center gap-12 text-center md:text-left">
+                       <div class="md:w-2/3">
+                            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-text-primary leading-tight">Srihari Sakshith Kotichintala</h1>
+                            <p class="mt-4 text-lg md:text-2xl text-accent font-medium">CSE-AIML Student | Full-Stack Developer</p>
+                            <p class="mt-2 text-md md:text-xl text-text-secondary">CGPA: 9.23</p>
+                            <div id="social-links-hero" class="mt-8 flex justify-center md:justify-start space-x-6">
+                                <!-- Social links injected here -->
+                            </div>
+                            <a href="#projects" class="mt-12 inline-block bg-accent text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-500 transition-transform transform hover:scale-105 duration-300">
+                                View My Work
+                            </a>
+                       </div>
+                       <div class="relative md:w-1/3 mt-8 md:mt-0">
+                            <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=2071&auto=format&fit=crop" alt="Srihari Sakshith" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover mx-auto shadow-2xl border-4 border-accent/50" />
+                             <div class="absolute inset-0 rounded-full border-4 border-accent/30 animate-pulse"></div>
+                       </div>
+                   </div>
+                </div>
+            </section>
+            
+            <section id="about" class="py-20 md:py-28">
+                <div class="container mx-auto px-4 md:px-8 animate-fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-text-primary relative inline-block left-1/2 -translate-x-1/2">
+                        About Me
+                        <span class="block h-1 w-20 bg-accent mt-2 mx-auto"></span>
+                    </h2>
+                     <p class="max-w-3xl mx-auto text-center text-text-secondary text-lg md:text-xl leading-relaxed">
+                        CSE-AIML undergraduate with a strong foundation in data structures, scalable systems, and full-stack development. Experienced in building real-time, distributed applications and AI-powered tools. Proven track record of excelling in national hackathons, mastering algorithmic thinking through 300+ LeetCode problems, and contributing to open-source solutions. Seeking a Software Engineering Internship to apply engineering rigor and innovation in fast-paced environments.
+                    </p>
+                </div>
+            </section>
+
+            <section id="experience" class="py-20 md:py-28 bg-secondary">
+                 <div class="container mx-auto px-4 md:px-8 animate-fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-text-primary relative inline-block left-1/2 -translate-x-1/2">
+                        Experience
+                        <span class="block h-1 w-20 bg-accent mt-2 mx-auto"></span>
+                    </h2>
+                    <div id="experience-container" class="max-w-4xl mx-auto space-y-12">
+                        <!-- Experience items will be injected here -->
+                    </div>
+                </div>
+            </section>
+            
+            <section id="projects" class="py-20 md:py-28">
+                <div class="container mx-auto px-4 md:px-8 animate-fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-text-primary relative inline-block left-1/2 -translate-x-1/2">
+                        Projects
+                        <span class="block h-1 w-20 bg-accent mt-2 mx-auto"></span>
+                    </h2>
+                    <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Project cards will be injected here -->
+                    </div>
+                </div>
+            </section>
+
+            <section id="education" class="py-20 md:py-28 bg-secondary">
+                 <div class="container mx-auto px-4 md:px-8 animate-fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-text-primary relative inline-block left-1/2 -translate-x-1/2">
+                        Education
+                        <span class="block h-1 w-20 bg-accent mt-2 mx-auto"></span>
+                    </h2>
+                    <div id="education-container" class="max-w-4xl mx-auto space-y-8">
+                        <!-- Education items will be injected here -->
+                    </div>
+                </div>
+            </section>
+            
+            <section id="skills" class="py-20 md:py-28">
+                 <div class="container mx-auto px-4 md:px-8 animate-fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-text-primary relative inline-block left-1/2 -translate-x-1/2">
+                        Skills
+                        <span class="block h-1 w-20 bg-accent mt-2 mx-auto"></span>
+                    </h2>
+                    <div id="skills-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        <!-- Skills will be injected here -->
+                    </div>
+                </div>
+            </section>
+            
+            <section id="certifications" class="py-20 md:py-28 bg-secondary">
+                <div class="container mx-auto px-4 md:px-8 animate-fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-text-primary relative inline-block left-1/2 -translate-x-1/2">
+                        Certifications
+                        <span class="block h-1 w-20 bg-accent mt-2 mx-auto"></span>
+                    </h2>
+                    <div id="certifications-container" class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Certifications will be injected here -->
+                    </div>
+                </div>
+            </section>
+
+            <section id="achievements" class="py-20 md:py-28">
+                 <div class="container mx-auto px-4 md:px-8 animate-fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-text-primary relative inline-block left-1/2 -translate-x-1/2">
+                        Achievements
+                        <span class="block h-1 w-20 bg-accent mt-2 mx-auto"></span>
+                    </h2>
+                    <div id="achievements-container" class="max-w-4xl mx-auto space-y-6">
+                       <!-- Achievements will be injected here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="contact" class="bg-secondary py-20">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <h2 class="text-3xl font-bold text-text-primary mb-4">Get In Touch</h2>
+                <p class="text-text-secondary max-w-xl mx-auto mb-8">
+                    I'm actively looking for Software Engineering Internship roles and I'm excited to connect. Whether you have a question or just want to say hi, my inbox is always open!
+                </p>
+                <a 
+                    href="mailto:kotichintalasriharisakshith@gmail.com" 
+                    class="inline-block bg-accent text-white font-semibold py-3 px-10 rounded-full hover:bg-blue-500 transition-transform transform hover:scale-105 duration-300 text-lg mb-10"
+                >
+                    Say Hello
+                </a>
+                 <div id="social-links-footer" class="flex justify-center space-x-6 mb-8">
+                    <!-- Social links injected here -->
+                </div>
+                <a href="tel:+917013955017" class="flex items-center justify-center gap-2 text-text-secondary hover:text-accent transition-colors duration-300 mb-8">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                   <span>+91 7013955017</span>
+                </a>
+                <p class="text-sm text-gray-600">&copy; <span id="year"></span> Srihari Sakshith Kotichintala. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- DATA ---
+            const projectsData = [
+                { title: 'AI-Powered Emergency Health Network', description: 'Designed and deployed a scalable MERN stack platform for emergency hospital–patient coordination. Implemented real-time alerts and chatbot integration; enhanced responsiveness by 30%.', tags: ['React', 'Node.js', 'MongoDB', 'Express.js'], githubUrl: 'https://github.com/SrihariSakshith/AI-Powered-Emergency-Health-Network', imageUrl: 'https://images.unsplash.com/photo-1576091160550-2173dba999ab?q=80&w=2070&auto=format&fit=crop' },
+                { title: 'Gesture-Based Metro Ticket Booking', description: 'Contactless ticket booking for Hyderabad Metro using hand gestures and Google Gemini AI. Allows station selection, fare calculation, and payment confirmation via gestures.', tags: ['Python', 'OpenCV', 'Gemini AI', 'Flask'], githubUrl: 'https://github.com/SrihariSakshith/Gesture-Based-Metro-Ticket-Booking-System', imageUrl: 'https://images.unsplash.com/photo-1621619856624-42FD1e3a8989?q=80&w=1932&auto=format&fit=crop' },
+                { title: 'Vision & Voice Controlled Desktop Assistant', description: 'A Python-based personal desktop assistant using voice commands and text input to perform tasks like opening apps, detecting objects, and user interaction.', tags: ['Python', 'OpenAI API', 'Streamlit'], githubUrl: 'https://github.com/SrihariSakshith/AI-Assistant-Vision-Speech-and-Voice-Controlled-Desktop-Operations-to-Streamline-Your-Workflow', imageUrl: 'https://images.unsplash.com/photo-1677756119517-756a188d2d94?q=80&w=2070&auto=format&fit=crop' },
+                { title: 'Deepfake Detection System', description: 'A deepfake classification app allowing users to verify media as "real" or "fake" and view prediction statistics. Built a classifier with 87% test accuracy.', tags: ['CNN', 'TensorFlow', 'OpenCV', 'Python'], githubUrl: 'https://github.com/SrihariSakshith/DESIGNATHON-2025-CODE-MAESTRO-S-1.1', imageUrl: 'https://images.unsplash.com/photo-1616161569048-64ab2414bf4c?q=80&w=2070&auto=format&fit=crop' },
+                { title: 'Speech Emotion Classification for Crisis Intervention', description: 'Classifies speech emotions (angry, happy, sad, etc.) to detect crisis situations. Useful for mental health support and emergency response systems.', tags: ['Deep Learning', 'Python', 'Audio Processing'], githubUrl: 'https://github.com/SrihariSakshith/Speech-Emotion-Classification-for-Crisis-Intervention', imageUrl: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop' },
+                { title: 'Real-time Speaker Identification', description: 'A deep learning system that processes audio, extracts MFCC features, and classifies speakers using an LSTM neural network for real-time identification.', tags: ['LSTM', 'Deep Learning', 'MFCC', 'Python'], githubUrl: 'https://github.com/SrihariSakshith/Speaker-Identification', imageUrl: 'https://images.unsplash.com/photo-1589903332429-19b882a63133?q=80&w=1964&auto=format&fit=crop' },
+                { title: 'TaskMate - Smart Todo List Manager', description: 'A React-based Todo List Manager that allows users to add, view, and delete tasks, with data persistence using browser localStorage.', tags: ['React', 'JavaScript', 'HTML/CSS', 'LocalStorage'], githubUrl: 'https://github.com/SrihariSakshith/TaskMate---Smart-Todo-List-Manager', imageUrl: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=2072&auto=format&fit=crop' },
+                { title: 'Interactive Messaging Website', description: 'A chat application supporting real-time messaging, file sharing, and location sharing for an interactive and seamless communication experience.', tags: ['Node.js', 'Socket.IO', 'JavaScript'], githubUrl: 'https://github.com/SrihariSakshith/Interactive-Messaging-Website-with-File-and-Location-Sharing', imageUrl: 'https://images.unsplash.com/photo-1553642034-3321d4944034?q=80&w=2070&auto=format&fit=crop' },
+            ];
+            const experiencesData = [
+                { title: 'Gen AI Hackathon', organization: 'Gesture-Based Metro Ticket Booking System', date: 'Jul 2024', points: ['Engineered a contactless ticketing platform; reduced interaction time by 40% using real-time gesture recognition.', 'Selected in top 5 teams out of 100+ for demonstrating scalable user-centric design and efficient backend architecture.'] },
+                { title: 'VNR Designathon (Finalist)', organization: 'Deepfake Detection System', date: 'Mar 2024', points: ['Built a deepfake classifier with 87% test accuracy using transfer learning and real-time detection pipeline.', 'Finalist (top 1%) among 200+ national teams for technical accuracy and robustness.'] },
+            ];
+            const educationData = [
+                { degree: 'B.E. in Computer Science and Engineering (AI & ML)', institution: 'Vasavi College of Engineering, Hyderabad', period: 'Nov 2022 – Present', grade: 'CGPA: 9.23' },
+                { degree: 'Intermediate (MPC)', institution: 'Sri Chaitanya Junior College, Hyderabad', period: 'Jun 2020 – May 2022', grade: 'Score: 98.1% (Top 1%)' },
+                { degree: 'SSC', institution: 'MIMS High School, Mancherial', period: 'Jul 2015 – May 2020', grade: 'GPA: 10/10' },
+            ];
+            const skillsData = [
+                { category: 'Languages', items: ['Python', 'C', 'Java', 'JavaScript', 'HTML', 'SQL'] },
+                { category: 'Concepts', items: ['Data Structures', 'Algorithms', 'OOP', 'DBMS', 'OS', 'Networking', 'System Design'] },
+                { category: 'Core Subjects', items: ['DSA', 'OS', 'DBMS', 'CN', 'ML', 'DL', 'AI', 'Software Engineering'] },
+                { category: 'Tools & Frameworks', items: ['React', 'Node.js', 'Git/GitHub', 'MongoDB', 'TensorFlow', 'Jupyter', 'OpenCV'] },
+                { category: 'Soft Skills', items: ['Critical Thinking', 'Fast Learner', 'Collaboration', 'Time Management', 'Adaptability'] },
+            ];
+            const certificationsData = [
+                { issuer: 'Cisco Networking Academy', name: 'CCNA: Introduction to Networks (ITN)' },
+                { issuer: 'Cisco Networking Academy', name: 'CCNA: Switching, Routing, and Wireless Essentials (SRWE)' },
+                { issuer: 'Cisco Networking Academy', name: 'CCNA: Enterprise Networking, Security, and Automation (ENSA)' },
+                { issuer: 'Cisco Networking Academy', name: 'Python Essentials 1' },
+                { issuer: 'Cisco Networking Academy', name: 'Python Essentials 2' },
+                { issuer: 'NPTEL', name: 'Joy of Computing in Python', details: 'Gold – 90%' },
+                { issuer: 'NPTEL', name: 'Problem Solving in C', details: 'Silver – 84%' },
+                { issuer: 'Infosys Springboard', name: 'Deep Learning for Developers' },
+                { issuer: 'Infosys Springboard', name: 'AI Primer' },
+            ];
+            const achievementsData = [
+                { title: '300+ LeetCode Problems', description: 'Solved over 300 problems, demonstrating strong command over problem-solving and algorithms.' },
+                { title: 'VNR Designathon Finalist', description: 'Ranked in the top 1% for designing a scalable AI-based deepfake detection solution.' },
+                { title: 'Academic Excellence', description: 'Ranked 3rd in 1st Year CSE-AIML among 250+ students for academic and project excellence.' },
+                { title: 'GATE CS 2025 Qualified', description: 'Certified core computer science aptitude and conceptual depth by qualifying the exam.' },
+            ];
+            const navLinksData = [
+                { name: 'About', href: '#about' }, { name: 'Experience', href: '#experience' }, { name: 'Projects', href: '#projects' }, { name: 'Education', href: '#education' }, { name: 'Skills', href: '#skills' }, { name: 'Certifications', href: '#certifications' }, { name: 'Achievements', href: '#achievements' }, { name: 'Contact', href: '#contact' },
+            ];
+
+            // --- ICONS ---
+            const icons = {
+                linkedIn: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>',
+                github: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>',
+                leetCode: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M13.48 4.49l-3.48 7.99h3.48v2H6.52l3.48-7.99h-3.48v-2h7.96zM21 18v2h-7v-2h7zm-8.5-4l-1.42 1.41L12.17 12l-1.09-1.41L12.5 9l2.5 3-2.5 3zm-5.08-2.58L6 12l1.42 1.42L9.84 12 7.42 9.42zM2 18h7v2H2v-2z"></path></svg>',
+                codeChef: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>CodeChef</title><path d="M12.012 21.89H12c-4.968 0-9-4.032-9-9s4.032-9 9-9c4.932 0 8.94 3.972 8.988 8.892v.108c0 4.968-4.032 9-9 9zM12 5.31c-3.696 0-6.684 2.988-6.684 6.684s2.988 6.684 6.684 6.684c3.696 0 6.684-2.988 6.684-6.684S15.696 5.31 12 5.31zM9.54 10.152l-1.392 1.38v.024l2.16 2.148 2.16-2.148v-.024l-1.392-1.38-1.428 1.428-.732-.708zm4.92.012v4.32h2.256V7.836h-2.256v2.328z"></path></svg>',
+                hackerRank: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>HackerRank</title><path d="M9.733 12.008c0 1.25-.984 2.268-2.196 2.268-1.21 0-2.196-1.018-2.196-2.268s.985-2.268 2.196-2.268c1.212 0 2.196 1.019 2.196 2.268zm8.934 0c0 1.25-.984 2.268-2.196 2.268-1.21 0-2.196-1.018-2.196-2.268s.985-2.268 2.196-2.268c1.212 0 2.196 1.019 2.196 2.268zm-4.467-5.053h-1.63v10.1h1.63V6.955zM21.996 18.26V5.738H17.47v-2.1H6.527v2.1H2.002v12.522h4.525v2.1h10.942v-2.1zM12 2.106c1.15 0 2.08.932 2.08 2.083s-.93 2.083-2.08 2.083-2.08-.932-2.08-2.083.93-2.083 2.08-2.083z"></path></svg>',
+                menu: '<svg class="w-7 h-7" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>',
+                close: '<svg class="w-7 h-7" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>'
+            };
+            const socialLinks = [
+                { name: 'LinkedIn', url: 'https://linkedin.com/in/srihari-sakshith-kotichintala-1a1a8a280', icon: icons.linkedIn },
+                { name: 'GitHub', url: 'https://github.com/SrihariSakshith', icon: icons.github },
+                { name: 'LeetCode', url: 'https://leetcode.com/u/kotichintalasriharisakshith', icon: icons.leetCode },
+                { name: 'CodeChef', url: 'https://www.codechef.com/users/sakshith325', icon: icons.codeChef },
+                { name: 'HackerRank', url: 'https://www.hackerrank.com/profile/sakshith_325', icon: icons.hackerRank },
+            ];
+
+            // --- RENDER FUNCTIONS ---
+            const renderProjects = () => {
+                const container = document.getElementById('projects-container');
+                container.innerHTML = projectsData.map(p => `
+                    <div class="bg-secondary rounded-lg shadow-lg flex flex-col overflow-hidden hover:transform hover:-translate-y-2 transition-transform duration-300 group">
+                        ${p.imageUrl ? `<div class="overflow-hidden h-48"><img src="${p.imageUrl}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" /></div>` : ''}
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h3 class="text-xl font-bold text-text-primary">${p.title}</h3>
+                                    <a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-accent transition-colors"><span class="w-6 h-6 inline-block">${icons.github}</span></a>
+                                </div>
+                                <p class="text-text-secondary mb-4 text-sm">${p.description}</p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                ${p.tags.map(tag => `<span class="bg-gray-700 text-xs font-semibold px-2 py-1 rounded-full text-text-secondary">${tag}</span>`).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            };
+
+            const renderExperience = () => {
+                const container = document.getElementById('experience-container');
+                container.innerHTML = experiencesData.map(exp => `
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-1/4 text-left md:text-right">
+                            <h3 class="text-lg font-semibold text-text-primary">${exp.organization}</h3>
+                            <p class="text-sm text-text-secondary">${exp.date}</p>
+                        </div>
+                        <div class="md:w-3/4 border-l-2 border-accent pl-8 relative">
+                            <div class="absolute -left-[10px] top-1 w-4 h-4 bg-accent rounded-full border-4 border-secondary"></div>
+                            <h4 class="text-xl font-bold text-accent">${exp.title}</h4>
+                            <ul class="mt-2 list-disc list-inside text-text-secondary space-y-2">
+                                ${exp.points.map(point => `<li>${point}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                `).join('');
+            };
+            
+            const renderEducation = () => {
+                const container = document.getElementById('education-container');
+                container.innerHTML = educationData.map(edu => `
+                     <div class="bg-primary p-6 rounded-lg shadow-md flex justify-between items-center">
+                         <div>
+                             <h3 class="text-xl font-semibold text-accent">${edu.degree}</h3>
+                             <p class="text-text-secondary">${edu.institution}</p>
+                             <p class="text-sm text-gray-500 mt-1">${edu.period}</p>
+                         </div>
+                         <p class="text-lg font-medium text-text-primary">${edu.grade}</p>
+                     </div>
+                `).join('');
+            };
+
+            const renderSkills = () => {
+                const container = document.getElementById('skills-container');
+                container.innerHTML = skillsData.map(skill => `
+                    <div class="bg-secondary p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold text-accent mb-4">${skill.category}</h3>
+                        <ul class="space-y-2">
+                            ${skill.items.map(item => `<li class="text-text-secondary">${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                `).join('');
+            };
+
+            const renderCertifications = () => {
+                const container = document.getElementById('certifications-container');
+                container.innerHTML = certificationsData.map(cert => `
+                    <div class="bg-primary p-6 rounded-lg shadow-lg flex flex-col justify-center text-center h-full">
+                        <h4 class="font-semibold text-text-primary text-lg">${cert.name}</h4>
+                        <p class="text-sm text-accent mt-2">${cert.issuer}</p>
+                        ${cert.details ? `<p class="text-sm text-text-secondary mt-1 font-medium">${cert.details}</p>` : ''}
+                    </div>
+                `).join('');
+            };
+            
+            const renderAchievements = () => {
+                const container = document.getElementById('achievements-container');
+                container.innerHTML = achievementsData.map(ach => `
+                    <div class="bg-secondary p-6 rounded-lg shadow-lg">
+                         <h4 class="font-semibold text-accent text-xl mb-2">${ach.title}</h4>
+                         <p class="text-text-secondary">${ach.description}</p>
+                    </div>
+                `).join('');
+            };
+            
+            const renderSocialLinks = () => {
+                const heroContainer = document.getElementById('social-links-hero');
+                const footerContainer = document.getElementById('social-links-footer');
+                const heroHTML = socialLinks.map(link => `
+                    <a href="${link.url}" target="_blank" rel="noopener noreferrer" aria-label="${link.name}" class="text-text-secondary hover:text-accent transition-colors duration-300">
+                        <span class="w-7 h-7 inline-block">${link.icon}</span>
+                    </a>
+                `).join('');
+                const footerHTML = socialLinks.map(link => `
+                    <a href="${link.url}" target="_blank" rel="noopener noreferrer" aria-label="${link.name}" class="text-text-secondary hover:text-accent transition-colors duration-300">
+                         <span class="w-8 h-8 inline-block">${link.icon}</span>
+                    </a>
+                `).join('');
+                heroContainer.innerHTML = heroHTML;
+                footerContainer.innerHTML = footerHTML;
+            };
+
+            const renderNavLinks = () => {
+                const desktopContainer = document.getElementById('desktop-nav');
+                const mobileContainer = document.getElementById('mobile-menu').querySelector('.flex-col');
+                const desktopHTML = navLinksData.map(link => `
+                    <a href="${link.href}" class="transition-colors duration-300 text-text-secondary hover:text-text-primary">${link.name}</a>
+                `).join('');
+                 const mobileHTML = navLinksData.map(link => `
+                    <a href="${link.href}" class="transition-colors duration-300 text-lg text-center py-1 text-text-secondary hover:text-text-primary">${link.name}</a>
+                `).join('');
+                desktopContainer.innerHTML = desktopHTML;
+                mobileContainer.innerHTML = mobileHTML;
+            }
+
+            // --- NAVIGATION AND EVENT LISTENERS ---
+            
+            // Mobile Menu Toggle
+            const menuToggleBtn = document.getElementById('menu-toggle-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            let isMenuOpen = false;
+
+            menuToggleBtn.addEventListener('click', () => {
+                isMenuOpen = !isMenuOpen;
+                mobileMenu.classList.toggle('hidden');
+                menuToggleBtn.innerHTML = isMenuOpen ? icons.close : icons.menu;
+            });
+            
+            // Smooth Scrolling & Active Link Highlighting
+            const handleNavClick = (e) => {
+                if (e.target.tagName === 'A' && e.target.hash) {
+                    e.preventDefault();
+                    const targetId = e.target.hash;
+                    const element = document.querySelector(targetId);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        if(isMenuOpen){
+                             mobileMenu.classList.add('hidden');
+                             isMenuOpen = false;
+                             menuToggleBtn.innerHTML = icons.menu;
+                        }
+                    }
+                }
+            };
+            
+            document.querySelector('header').addEventListener('click', handleNavClick);
+            document.querySelector('main').addEventListener('click', (e) => {
+                if(e.target.closest('a')?.hash) {
+                   handleNavClick(e)
+                }
+            });
+
+            // Intersection Observer for Active Section
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('header nav a');
+            const mobileNavLinks = document.querySelectorAll('#mobile-menu a');
+            
+            const observerOptions = { root: null, rootMargin: '0px 0px -50% 0px', threshold: 0 };
+
+            const observer = new IntersectionObserver((entries) => {
+                let currentActive = 'hero';
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                       currentActive = entry.target.id;
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.toggle('active-nav-link', link.hash === `#${currentActive}`);
+                });
+                mobileNavLinks.forEach(link => {
+                    link.classList.toggle('active-nav-link', link.hash === `#${currentActive}`);
+                });
+
+            }, observerOptions);
+
+            sections.forEach(sec => observer.observe(sec));
+            
+            // Set current year in footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // --- INITIAL RENDER CALLS ---
+            renderNavLinks();
+            renderProjects();
+            renderExperience();
+            renderEducation();
+            renderSkills();
+            renderCertifications();
+            renderAchievements();
+            renderSocialLinks();
+        });
+    </script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
